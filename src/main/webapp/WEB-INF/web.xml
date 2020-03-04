@@ -4,6 +4,7 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
          id="WebApp_ID" version="2.5">
 
+    <!--管理员登录tomcat的status时，各运行中的应用显示出来的那个名字-->
     <display-name>Archetype Created Web Application</display-name>
 
     <filter>
@@ -31,6 +32,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
@@ -38,12 +40,13 @@
         </param-value>
     </context-param>
 
+    <!--Tomcat服务器和用户映射的过程，首先看servletMapping寻找url，然后跟随者name去寻找class-->
+
     <servlet>
         <servlet-name>dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
-
 
 
     <servlet-mapping>

@@ -10,6 +10,7 @@
         </filter>
     </appender>
 
+    <!--日志的本机路径？-->
     <appender name="mmall2" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <!--<File>d:/mmalllog/mmall.log</File>-->
         <File>/developer/apache-tomcat-7.0.73/logs/mmall2.log</File>

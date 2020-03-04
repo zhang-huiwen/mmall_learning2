@@ -10,7 +10,7 @@
 
     <context:component-scan base-package="com.mmall2" annotation-config="true"/>
 
-    <mvc:annotation-driven>
+    <mvc:annotation-driven><!--扩展驱动注解 -->
         <mvc:message-converters>
             <bean class="org.springframework.http.converter.StringHttpMessageConverter">
                 <property name="supportedMediaTypes">
